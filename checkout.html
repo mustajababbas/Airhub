@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.js"></script>
+    
+    <title>Check Out</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+
+<section>
+
+    <div class="container-fluid">
+
+        <div class="row checkout">
+
+            <div class="col-lg-8 col-12 col-md-8 checkout-left">
+
+                <a href="#"> <img src="images/Airhub Final logo.png" class="logo"></a>
+
+
+
+
+                <form id="regForm" action="">
+
+                    
+                    <!-- One "tab" for each step in the form: -->
+
+                
+
+
+                    <div class="tab">
+
+
+
+
+                      <div class="form-field">
+
+                        <div class="form-field-flex">
+
+                        <label>Contact Information *</label>
+                        <span>Already have an Account?<a href="#"> Login</a></span>
+
+                        </div>
+
+                        <input placeholder="mail@example.com" oninput="this.className = ''">
+
+                      </div>
+
+
+                      <div class="sign-title">
+                        <h2>Passenger Information</h2>       
+                      </div>
+
+                        <div class="form-field">
+
+                          <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12 dual-width">
+                              <label>First Name *</label>
+                              <input type="text" placeholder="First name" oninput="this.className = ''">
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12 dual-width">
+                              <label>Second Name *</label>
+                              <input type="text" placeholder="Second name" oninput="this.className = ''">
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div class="form-field">
+
+                          <div class="row">
+                            
+                            <div class="col-lg-6 col-md-6 col-12 dual-width">
+                              <label>Email *</label>
+                              <input type="email" class="click email" placeholder="Email" >
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12 dual-width">
+                              <label>Phone *</label>
+                              <input type="tel" placeholder="+88088888888888" class="click phone" >
+                            </div>
+
+                          </div>
+                          
+                          
+                        </div>
+
+                        <div class="form-field">
+                          <label>Address *</label>
+                          <input type="text" placeholder="Address" oninput="this.className = ''">
+                        </div>
+
+
+                        <div class="form-field">
+                          <label>Apartment, Suite, etc  *</label>
+                          <input type="text" placeholder="Apartment, Suite, etc" oninput="this.className = ''">
+                        </div>
+
+
+                        <div class="form-field">
+                          <label>City *</label>
+                          <input type="text" placeholder="City" oninput="this.className = ''">
+                        </div>
+
+
+                        <div class="form-field">
+
+                          <div class="row">
+
+                            <div class="col-6">
+                              <label for="countries">Country/Region *</label>
+
+                                  <select name="countries" id="countries" oninput="this.className = ''">
+                                    <option value="" disabled selected>Country/Region</option>
+                                    <option value="pakistan">Pakistan</option>
+                                    <option value="india">India</option>
+                                    <option value="bangladesh">Bangladesh</option>
+                                    <option value="sri-lanka">Sri Lanka</option>
+                                  </select>
+
+                            </div>
+
+                            <div class="col-6">
+                              <label>Postal Code *</label>
+                              <input type="text" placeholder="Postal Code" oninput="this.className = ''">
+                            </div>
+
+                          </div>
+                          
+                        </div>
+
+                        
+                        <div class="form-field" >
+                          <label>NID Number (For Domestic Flights)</label>
+                          <input type="text" placeholder="NID Number" class="not-require" >
+                        </div>
+
+                        <div class="form-field">
+
+                          <label><input type="checkbox" value="" class="checkbox not-require" id="show-intl"> International Flights?</label>
+                          
+  
+                        </div> 
+
+
+                        
+
+                       
+                        <div class="form-field" id="hide-intl">
+                          <label>Passport Number (For International Flights)</label>
+                          <input type="text" placeholder="Passport Number"  class="not-require">
+                        </div>
+
+
+
+                       
+
+
+                          
+                    </div>
+
+                        
+                    <div class="tab">
+
+                      <div class="sign-title">
+                        <h2>Payment</h2> 
+                        <span>All transactions are secure and encrypted</span>      
+                      </div>
+
+                      <!-- <div class="payment">
+
+                         <div class="payment-footer">
+
+                         <img src="images/paypal-cropped.png">
+                         <a href="#" target="_blank"> <h6>Pay With PayPal</h6></a>
+
+                        </div>
+
+                      </div> -->
+
+                      
+                      <div class="accordion payment" id="accordionExample">
+
+                        <div class="accordion-item" style="border:none;">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                           
+                              <div class="payment-head" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" >
+
+                                <span class="circle"></span>
+
+                                <h5> Credit Card Or Debit Card</h5>
+      
+                                <div>
+      
+                                  <img src="images/visa.png">
+                                  <img src="images/unionpay.png">
+                                  <img src="images/maestro.png">
+      
+                                </div>
+                                
+                              </div> 
+                                                         
+
+                          </h2>
+
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                
+                       
+
+                              <div class="payment-body" >
+
+                                <div class="form-field">
+                                  
+                                      <label>Card Number *</label>
+                                      <input type="text" placeholder="Card Number" oninput="this.className = ''">
+                                
+
+                                </div>
+
+
+                                
+                                <div class="form-field">
+                                  
+                                  <label>Name On Card *</label>
+                                  <input type="text" placeholder="Name on card" oninput="this.className = ''">
+                            
+
+                                </div>
+
+                                <div class="form-field">
+
+                                  <div class="row">
+
+                                    <div class="col-lg-6 col-md-6 col-12 dual-width">
+                                      <label>Expiration Date (MM/YY) *</label>
+                                      <input type="month" placeholder="First name" oninput="this.className = ''">
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12 dual-width">
+                                      <label>Security Code *</label>
+                                      <input type="text" placeholder="Security Code" oninput="this.className = ''">
+                                    </div>
+
+                                  </div>
+
+                                </div>
+
+                              </div>
+
+
+
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="accordion-item" style="border:none;">
+                          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                           
+                              <div class="payment-head collapsed" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+
+                                <span class="circle"></span>
+                                <h5>Bank Deposit </h5>
+                                
+                              </div>
+                            
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <p class="mb-3">
+
+                                  Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds
+                                  have cleared in our account. Please send the payment screenshot to WhatsApp +920+231245667
+
+                                </p>
+
+                                <h5>Bank Details</h5>
+                                <p><strong>Bank Title:</strong> Example</p>
+                                <p><strong>Account Title:</strong> Example</p>
+                                <p><strong>Account Number:</strong> Example</p>
+                                <p><strong>IBAN:</strong> Example</p>
+
+                                <p class="mt-3">Shop with peace of mind :)</p>
+
+                            </div>
+                          </div>
+                        </div>
+
+
+                       
+
+
+
+                    </div>
+
+                    </div>
+          
+                    
+                    <div style="overflow:auto;">
+                      <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="button-green" style="margin-right: 20px;">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)" class="button-green">Continue</button>
+                        
+                      </div>
+                    </div>
+                 
+                    
+                    <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:40px;">
+                          <span class="step"></span>
+                          <span class="step"></span>
+                          
+                        </div>
+                 
+                    
+                </form>
+
+
+                    
+            </div>
+
+
+            <div class="col-lg-4 col-12 col-md-4 checkout-right">
+              
+              <div class="green-overlay"></div>
+
+              <div style="position: sticky;top: 10px;">
+
+              <div class="reserve">
+                <h2>Reservation Summary</h2> 
+              </div>
+
+              <div class="flights">
+                <i class="fa-solid fa-plane"></i><h3>Flight 1</h3>
+              </div>
+
+              <div class="time-detail">
+                <p>Departing</p>
+
+                  <div class="airport-time">
+
+                  <p>Dhakka International</p>
+                  <p>30/11/2021 - 7:00 PM</p>
+
+                  </div>
+              </div>
+
+
+              <div class="time-detail">
+                <p>Arrival</p>
+
+                  <div class="airport-time">
+
+                  <p>Dhakka International</p>
+                  <p>30/11/2021 - 7:00 PM</p>
+
+                  </div>
+              </div>
+
+
+              <div class="time-detail">
+
+                <div class="flight-info">
+
+                <p>Flight BD-300</p>
+                <p>Cabin: Economy</p>
+
+                </div>
+                
+                <div class="fare-basis">
+                  <p>Fare Basis: TOWINET</p>
+                </div>
+
+              </div>
+
+
+              <div class="time-detail">
+                
+
+                  <div class="total-price">
+
+                  <p>Ticket Fare</p>
+                  <p>1,000 TK</p>
+
+                  </div>
+
+                  <div class="total-price">
+
+                    <p>Total Tax</p>
+                    <p>500 TK</p>
+  
+                  </div>
+
+                  <div class="total-price">
+
+                    <p>Total</p>
+                    <p>1,500 TK</p>
+    
+                  </div>
+
+              </div>
+                
+            </div>
+             
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="vendor/main.js"></script>
+
+
+    
+</body>
+</html>
+

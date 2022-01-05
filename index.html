@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.js"></script>
+    <title>Air Hub</title>
+</head>
+<body>
+        
+    <div class="top-header">
+        <div class="container d-flex justify-content-between align-items-center top-head-flex"> 
+            <div class="top-left">
+
+                <p class="m-0"><i class="fa-solid fa-phone pe-2"></i>For Support? Call us +1 234-567-8901</p>
+
+            </div>
+
+            <div class="d-flex">
+
+                <ul class="navbar-nav  flex-row">
+
+                    <li class="nav-item">
+                        <a href="#" class="top-links">My Account</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="top-links">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="top-links">Sign Up</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="images/Airhub Final logo.png" alt="" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarToggler" >
+                
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FLIGHTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICES</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOGS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                
+                </ul>
+            
+          </div>
+        </div>
+    </nav>
+
+    
+        <div class="bg">
+
+        </div>
+    
+        <section>
+
+            
+
+            <div class="search-flights">
+
+                    <div class="container flights-background">
+
+                    <form class="flights-form" id="flights-form">
+
+                        <h5>DESTINATION</h5>
+
+                        <div class="row">
+
+                            <div class="col-lg-3 col-12 no-padding">
+
+                            <input type="text" placeholder="DESTINATION" >
+
+                            </div>
+
+                            <div class="col-lg-3 col-12 no-padding">
+
+                                <input type="text" placeholder="Check In" onfocus="(this.type='date')" class="date">
+                                <input type="text" placeholder="Check Out" onfocus="(this.type='date')" class="date">
+    
+                            </div>
+
+                            <div class="col-lg-4 col-12 no-padding room-select" >
+
+                                <a href="javascript:void(0);" class="all-over" onclick="dropDown()"></a>
+                            
+                               <span class="set-text" id="rooms">ROOMS</span>
+                               <span class="set-text" id="adults ">ADULTS</span>
+                               <span class="set-text" id="kids" >KIDS</span>
+                               <i class="fa-solid fa-caret-down"></i>
+
+                               
+                               <div id="myDropdown" class="dropdown-content"> 
+
+                                <div class="value-increment">
+
+                                    <h5>Rooms</h5>
+
+                                <div class="value-button decrease" id="decrease"  value="Decrease Value">-</div>
+                                <input type="number" id="room-number" value="0" class="number" />
+                                <div class="value-button increase" id="increase"  value="Increase Value">+</div>
+
+                                </div>
+
+
+                                <div class="value-increment">
+
+                                    <h5>Adults</h5>
+
+                                <div class="value-button decrease" id="decrease"  value="Decrease Value">-</div>
+                                <input type="number" id="adult-number" value="0" class="number" />
+                                <div class="value-button increase" id="increase"  value="Increase Value">+</div>
+
+                                </div>
+
+
+                                <div class="value-increment">
+
+                                    <h5>Kids</h5>
+
+                                <div class="value-button decrease" id="decrease"  value="Decrease Value">-</div>
+                                <input type="number" id="kids-number" value="0" class="number" />
+                                <div class="value-button increase" id="increase"  value="Increase Value">+</div>
+
+                                </div>
+
+                                <div class="age-confirm-flex">
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                    
+                                    <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                    <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                
+
+                                    </div>
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                        
+                                        <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                        <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                    
+        
+                                    </div>
+
+                                </div>
+
+
+                                <div class="age-confirm-flex">
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                    
+                                    <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                    <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                
+
+                                    </div>
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                        
+                                        <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                        <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                    
+        
+                                    </div>
+
+                                </div>
+
+
+                                </div>
+        
+                            </div>
+
+
+
+                            <div class="col-lg-2 col-12 no-padding search-icon">
+
+                                <input type="submit" value="SEARCH" >
+                                <i class="fa-solid fa-magnifying-glass"></i>
+            
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 orders">
+
+                        <div class="box">
+
+                            <a href="#"> 
+                                <img src="images/plane1.jpg" alt="">
+                                
+                                <div class="flight-des">
+
+                                    <div class="flight-name"> 
+                                        <p>ECONOMY</p>
+                                        <p>৳ 70</p>
+                                    </div>
+                                
+                                    <div class="flight-name"> 
+                                        <span>Flight</span>
+                                        <span>/ Upcoming</span>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 orders">
+
+                        <div class="box">
+
+                            <a href="#">
+                                <img src="images/plane2.jpg" alt="">
+                                
+                                <div class="flight-des">
+
+                                    <div class="flight-name"> 
+                                        <p>ECONOMY</p>
+                                        <p>৳ 70</p>
+                                    </div>
+                                
+                                    <div class="flight-name"> 
+                                        <span>Flight</span>
+                                        <span>/ Upcoming</span>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+
+                    </div> 
+
+                    <div class="col-lg-3 col-md-6 col-12 orders">
+
+                        <div class="box">
+                            <a href="#"> 
+                                <img src="images/plane3.jpg" alt="">
+                                
+                                <div class="flight-des">
+
+                                    <div class="flight-name"> 
+                                        <p>ECONOMY</p>
+                                        <p>৳ 70</p>
+                                    </div>
+                                
+                                    <div class="flight-name"> 
+                                        <span>Flight</span>
+                                        <span>/ Upcoming</span>
+                                    </div>
+
+                                </div>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-12 order1">
+
+                        <div class="popular-flights">
+
+                           <h2>Popular Flights</h2>
+                           <img src="images/underlin.png" class="underline">
+
+                           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, saepe iste at illum facilis hic, </p>
+
+                           <a href="#" class="button-dark">View More</a>
+                        
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section section-dark">
+
+            <div class="container">
+
+                <div class="row">
+
+                    
+                    <div class="col-lg-3 col-md-6">
+
+                      <div class="icon-box">
+
+                        <img src="images/team.jpg" alt="">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <div class="box-des">
+
+                            <h5>Trust & Safety</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                Eos, ex dignissimos deleniti ducimus id impedit necessitatibus 
+                                culpa sint repellendus optio rem odit, neque harum temporibus, 
+                                laborum maxime commodi sapiente pariatur!</p>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+ 
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="icon-box">
+  
+                          <img src="images/team.jpg" alt="">
+  
+                          <i class="fa-solid fa-dollar-sign"></i>
+  
+                          <div class="box-des">
+  
+                              <h5>Price Guarantee</h5>
+                              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                  Eos, ex dignissimos deleniti ducimus id impedit necessitatibus 
+                                  culpa sint repellendus optio rem odit, neque harum temporibus, 
+                                  laborum maxime commodi sapiente pariatur!</p>
+  
+                          </div>
+  
+                        </div>
+  
+                      </div>
+
+                      <div class="col-lg-3 col-md-6">
+
+                        <div class="icon-box">
+  
+                          <img src="images/team.jpg" alt="">
+  
+                          <i class="fa-solid fa-plane"></i>
+  
+                          <div class="box-des">
+  
+                              <h5>Best Tour</h5>
+                              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                  Eos, ex dignissimos deleniti ducimus id impedit necessitatibus 
+                                  culpa sint repellendus optio rem odit, neque harum temporibus, 
+                                  laborum maxime commodi sapiente pariatur!</p>
+  
+                          </div>
+  
+                        </div>
+  
+                      </div>
+
+                      <div class="col-lg-3 col-md-6">
+
+                        <div class="icon-box">
+  
+                          <img src="images/team.jpg" alt="">
+  
+                          <i class="fa-solid fa-thumbs-up"></i>
+  
+                          <div class="box-des">
+  
+                              <h5>Good Guidance</h5>
+                              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                  Eos, ex dignissimos deleniti ducimus id impedit necessitatibus 
+                                  culpa sint repellendus optio rem odit, neque harum temporibus, 
+                                  laborum maxime commodi sapiente pariatur!</p>
+  
+                          </div>
+  
+                        </div>
+  
+                      </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="d-flex flex-column align-items-center">
+
+                <h2>Why Choose Airhub</h2>
+                <img src="images/underlin.png" class="underline">
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-6 col-lg-3">
+
+                    <div class="icon-box2">
+
+                    <i class="fa-solid fa-car"></i>
+
+                    
+  
+                        <h5>More Than 1000 Cars</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Eos, ex dignissimos deleniti ducimus id 
+                        </p>
+
+                    </div>
+                    
+
+
+                  </div>
+
+                  <div class="col-6 col-lg-3">
+
+                    <div class="icon-box2">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    
+  
+                        <h5>Offer For Group Booking</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Eos, ex dignissimos deleniti ducimus id 
+                        </p>
+
+                    </div>
+                    
+
+
+                  </div>
+
+                  <div class="col-6 col-lg-3">
+
+                    <div class="icon-box2">
+
+                        <i class="fa-solid fa-headphones-simple"></i>
+
+                    
+  
+                        <h5>24/7 Customer Service</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Eos, ex dignissimos deleniti ducimus id 
+                        </p>
+
+                    </div>
+                    
+
+
+                  </div>
+
+                  <div class="col-6 col-lg-3">
+
+                    <div class="icon-box2">
+
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    
+  
+                        <h5>Lowest Prices & Safety</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Eos, ex dignissimos deleniti ducimus id 
+                        </p>
+
+                    </div>
+                    
+
+
+                  </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section section-grey">
+
+            <div class="container">
+
+                <div class="d-flex flex-column align-items-center">
+
+                <h2>Our Gallery</h2>
+                <img src="images/underlin.png" class="underline">
+
+                </div>
+
+                <div class="row mt-5 g-2">
+
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane4.png">
+
+                    </a>
+
+                  </div>
+
+                  
+                 
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane5.png">
+
+                    </a>
+                    
+                  </div>
+
+                  
+                 
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane6.png">
+
+                    </a>
+                    
+                  </div>
+
+
+                  
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane6.png">
+
+                    </a>
+                    
+                  </div>
+
+                  
+                  
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane5.png">
+
+                    </a>
+                    
+                  </div>
+
+                  
+                  
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane4.png">
+
+                    </a>
+                    
+                  </div>
+                  
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="container">
+
+
+                <div class="reviews">
+                    
+                
+
+                <div class="slick-slider">
+
+                    <div class="slider-parent">
+                        <div class="review-slide">
+
+
+
+                            <i class="fa-solid fa-quote-left"></i>
+
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Aut perferendis exercitationem repellat ab amet, 
+                                animi cupiditate odio, perspiciatis est rem voluptatibus 
+                                explicabo quos autem temporibus illum placeat atque quibusdam ea.
+                            </p>
+                            
+
+                            <div class="slide-person">
+                                <img src="images/Layer 1.png">
+                                <h5>Ana Lovely</h5>
+                                <span>Heeps Tech, CEO</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>  
+
+                    <div class="slider-parent">
+                        <div class="review-slide">
+
+
+
+                            <i class="fa-solid fa-quote-left"></i>
+
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Aut perferendis exercitationem repellat ab amet, 
+                                animi cupiditate odio, perspiciatis est rem voluptatibus 
+                                explicabo quos autem temporibus illum placeat atque quibusdam ea.
+                            </p>
+                            
+
+                            <div class="slide-person">
+                                <img src="images/Layer 1.png">
+                                <h5>Ana Lovely</h5>
+                                <span>Heeps Tech, CEO</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="slider-parent">
+                        <div class="review-slide">
+
+
+
+                            <i class="fa-solid fa-quote-left"></i>
+
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Aut perferendis exercitationem repellat ab amet, 
+                                animi cupiditate odio, perspiciatis est rem voluptatibus 
+                                explicabo quos autem temporibus illum placeat atque quibusdam ea.
+                            </p>
+                            
+
+                            <div class="slide-person">
+                                <img src="images/Layer 1.png">
+                                <h5>Ana Lovely</h5>
+                                <span>Heeps Tech, CEO</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    
+
+                </div>
+                  
+
+
+                </div>
+
+            </div>
+            
+        </section>
+
+
+        <footer>
+
+            <div class="footer-top">   
+            
+                <div class="all-over"></div>
+   
+               <div class="container">
+   
+                   <div class="newsletter">
+   
+                       <span>Wanna Know Our Latest Offers And Deals Just Subscribe Here</span>
+                       <form>
+                           <div class="form-field">
+                               <input type="text" placeholder="ENTER YOUR EMAIL ID HERE">
+                               <input type="submit" value="SUBMIT">
+                           </div>
+   
+                       </form>
+   
+                   </div>
+   
+               </div>
+   
+           </div>
+   
+           <div class="footer-center">   
+   
+            <div class="container">
+   
+                   <div class="row">
+   
+                       <div class="col-12 col-lg-4 mb-5">
+   
+                           <a href="#"> <img src="images/Airhub Final logo.png" width="250px"></a>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda asperiores veniam reiciendis, 
+                               sequi eos et enim mollitia dignissimos adipisci, provident atque quos voluptas numquam culpa quis. 
+                               Aspernatur, mollitia illum.</p>
+   
+                               <br>
+   
+                           <a href="#">Read More ></a>
+   
+                       </div>
+   
+   
+                       <div class="col-12 col-lg-4  mb-5">
+   
+                           <span>SITE MAP</span>
+   
+                           <div class="footer-menu">
+   
+                               <ul>
+   
+                                   <li><a href="#">Countries</a></li>
+                                   <li><a href="#">Regions</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Districts</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Airports</a></li>
+                                   <li><a href="#">Hotels</a></li>
+                                   <li><a href="#">Place Of interest</a></li>
+   
+                                   <li><a href="#">Countries</a></li>
+                                   <li><a href="#">Regions</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Districts</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Airports</a></li>
+                                   <li><a href="#">Hotels</a></li>
+                                   <li><a href="#">Place Of interest</a></li>
+                               
+                               </ul>
+   
+                           </div>
+                           
+   
+                       </div>
+   
+   
+                       <div class="col-12 col-lg-4  mb-5">
+   
+                           <span>SUPPORTED PAYMENT METHOD</span>
+   
+                           <div class="footer-payment mb-3">
+   
+                               <img src="images/american-express.png">
+                               <img src="images/maestro.png">
+                               <img src="images/master_card.png">
+                               <img src="images/visa.png">
+                               <img src="images/paypal.png">
+                               <img src="images/visa-electron.png">
+                               <img src="images/discover.png">
+   
+   
+                           </div>
+
+                           <span>TAGS</span>
+
+                           <div class="tag-list-footer mt-3">
+
+                            <ul>
+
+                                <li>
+                                    <a href="#">Travel</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Booking</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Flights</a>
+                                </li>
+
+                            </ul>
+                            
+                           </div>
+   
+                       </div> 
+   
+               </div>
+   
+           </div>
+
+           </div>
+
+           <div class="footer-bottom">
+
+            <div class="container-fluid" style="background-color: #222222;padding: 20px 0;">
+
+                <div class="container">
+
+                    <div class="stay-connected">
+                    
+                    <div class="footer-social">
+                        <p>Stay Connected with Us -</p>
+                        <ul>
+
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        
+
+                        </ul>
+                    </div>
+
+                    <div>
+
+                        <p>Airhub.All Right Reserve</p>
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+           </div>
+   
+        </footer>
+
+
+  
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick/slick-theme.css"/>
+        <script type="text/javascript" src="vendor/slick/slick/slick.min.js"></script>
+    
+        <script>
+               
+    
+    
+                  $(document).ready(function(){
+                  $('.slick-slider').slick({
+                   infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows:true,
+                    
+                   });
+                  });
+
+
+                  
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropDown() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// // Close the dropdown menu if the user clicks outside of it
+// window.onclick = function(event) {
+// if (!event.target.matches('.all-over')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//     var openDropdown = dropdowns[i];
+//     if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//     }
+//     }
+// }
+// }
+
+
+
+$(document).ready(function(){
+
+                $(".value-increment .value-button").click(function(){
+                 var totalvalue =$(this).parent().find(".number").val();
+                  if($(this).hasClass("increase")){
+                     totalvalue++;
+                       $(this).parent().find(".number").val(totalvalue);
+                        }
+                   if($(this).hasClass("decrease")){
+                    if(totalvalue != 0){
+                    totalvalue--;
+                       $(this).parent().find(".number").val(totalvalue);
+                       }
+                         }
+                                
+                        });
+                        })
+                    </script>
+              
+        
+    
+</body>
+</html>

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.js"></script>
+    <title>Flights</title>
+</head>
+<body>
+        <div class="top-header">
+            <div class="container d-flex justify-content-between align-items-center top-head-flex"> 
+                <div class="top-left">
+    
+                    <p class="m-0"><i class="fa-solid fa-phone pe-2"></i>For Support? Call us +1 234-567-8901</p>
+    
+                </div>
+    
+                <div class="d-flex">
+    
+                    <ul class="navbar-nav  flex-row">
+    
+                        <li class="nav-item">
+                            <a href="#" class="top-links">My Account</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a href="#" class="top-links">Login</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a href="#" class="top-links">Sign Up</a>
+                        </li>
+    
+                    </ul>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="images/Airhub Final logo.png" alt="" width="150px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarToggler" >
+                
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FLIGHTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICES</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOGS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                
+                </ul>
+            
+          </div>
+        </div>
+    </nav>
+
+    
+        <section>
+
+            
+            <div class="search-flights">
+
+                
+
+                <div class="container">
+
+                    <h5 class="search-fl">Search Flights</h5>
+
+                    <div class="flights-background">
+
+                    
+                    <form class="flights-form" id="flights-form">
+
+                        
+
+                        <div class="row">
+
+                            <div class="col-lg-3 col-12 no-padding">
+
+                            <input type="text" placeholder="DESTINATION" >
+
+                            </div>
+
+                            <div class="col-lg-3 col-12 no-padding">
+
+                                <input type="text" placeholder="Check In" onfocus="(this.type='date')" class="date">
+                                <input type="text" placeholder="Check Out" onfocus="(this.type='date')" class="date">
+
+                            </div>
+
+                            <div class="col-lg-4 col-12 no-padding room-select" >
+
+                                <a href="javascript:void(0);" class="all-over" onclick="dropDown()"></a>
+                            
+                            <span class="set-text" id="rooms">ROOMS</span>
+                            <span class="set-text" id="adults ">ADULTS</span>
+                            <span class="set-text" id="kids" >KIDS</span>
+                            <i class="fa-solid fa-caret-down"></i>
+
+                            
+                            <div id="myDropdown" class="dropdown-content"> 
+
+                                <div class="value-increment">
+
+                                    <h5>Rooms</h5>
+
+                                <div class="value-button decrease" id="decrease"  value="Decrease Value">-</div>
+                                <input type="number" id="room-number" value="0" class="number" />
+                                <div class="value-button increase" id="increase"  value="Increase Value">+</div>
+
+                                </div>
+
+
+                                <div class="value-increment">
+
+                                    <h5>Adults</h5>
+
+                                <div class="value-button decrease" id="decrease"  value="Decrease Value">-</div>
+                                <input type="number" id="adult-number" value="0" class="number" />
+                                <div class="value-button increase" id="increase"  value="Increase Value">+</div>
+
+                                </div>
+
+
+                                <div class="value-increment">
+
+                                    <h5>Kids</h5>
+
+                                <div class="value-button decrease" id="decrease"  value="Decrease Value">-</div>
+                                <input type="number" id="kids-number" value="0" class="number" />
+                                <div class="value-button increase" id="increase"  value="Increase Value">+</div>
+
+                                </div>
+
+                                <div class="age-confirm-flex">
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                    
+                                    <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                    <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                
+
+                                    </div>
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                        
+                                        <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                        <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                    
+        
+                                    </div>
+
+                                </div>
+
+
+                                <div class="age-confirm-flex">
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                    
+                                    <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                    <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                
+
+                                    </div>
+
+                                    <div class="value-increment age-confirm">
+
+                                    
+                                        <input type="number" id="age-confirm" value="age confirm" class="number" placeholder="Age Confirm"/>
+                                        
+                                        <div class="value-button decrease age-value" id="decrease"  value="Decrease Value">-</div>
+                                        <div class="value-button increase age-value" id="increase"  value="Increase Value">+</div>
+                                    
+        
+                                    </div>
+
+                                </div>
+
+
+                                </div>
+        
+                            </div>
+
+
+
+                            <div class="col-lg-2 col-12 no-padding search-icon">
+
+                                <input type="submit" value="SEARCH" >
+                                <i class="fa-solid fa-magnifying-glass"></i>
+            
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+        </section>
+
+
+
+
+        <section class="section">
+
+
+
+
+                
+            <div class="container">
+
+
+                
+                <div class="text-center mb-5">
+
+                    <h2>Online Booking & Recent Tickets</h2>
+                    <img src="images/underlin.png" class="underline">
+                    
+                    </div>
+
+                
+
+                <div class="flights-listing">
+
+                    <img src="images/eithad.png">
+
+                    <div class="flights-destiny">
+
+                        <h2>DAC</h2>
+
+                        <div class="flights-timing">
+                            <h6 class="flight-class">Economy</h6>
+                            <h6 class="flight-way">ONEWAY</h6>
+                            <h6 class="flight-time">Sat, 25 Dec 2021</h6>
+                        </div>
+
+                        <h2>KHL</h2>
+
+
+                    </div>
+
+
+                    <div class="book-flight">
+
+                        <p>Starting From</p>
+                        <h6>TK.3,000.0</h6>
+                        <a href="#" class="button-green-small">Book Now</a>
+
+                    </div>
+
+
+                </div>
+
+                
+                <div class="flights-listing">
+
+                    <img src="images/eithad.png">
+
+                    <div class="flights-destiny">
+
+                        <h2>DAC</h2>
+
+                        <div class="flights-timing">
+                            <h6 class="flight-class">Economy</h6>
+                            <h6 class="flight-way">ONEWAY</h6>
+                            <h6 class="flight-time">Sat, 25 Dec 2021</h6>
+                        </div>
+
+                        <h2>KHL</h2>
+
+
+                    </div>
+
+
+                    <div class="book-flight">
+
+                        <p>Starting From</p>
+                        <h6>TK.3,000.0</h6>
+                        <a href="#" class="button-green-small">Book Now</a>
+
+                    </div>
+
+
+                </div>
+
+                
+                <div class="flights-listing">
+
+                    <img src="images/eithad.png">
+
+                    <div class="flights-destiny">
+
+                        <h2>DAC</h2>
+
+                        <div class="flights-timing">
+                            <h6 class="flight-class">Economy</h6>
+                            <h6 class="flight-way">ONEWAY</h6>
+                            <h6 class="flight-time">Sat, 25 Dec 2021</h6>
+                        </div>
+
+                        <h2>KHL</h2>
+
+
+                    </div>
+
+
+                    <div class="book-flight">
+
+                        <p>Starting From</p>
+                        <h6>TK.3,000.0</h6>
+                        <a href="#" class="button-green-small">Book Now</a>
+
+                    </div>
+
+
+                </div>
+
+                
+                <div class="flights-listing">
+
+                    <img src="images/eithad.png">
+
+                    <div class="flights-destiny">
+
+                        <h2>DAC</h2>
+
+                        <div class="flights-timing">
+                            <h6 class="flight-class">Economy</h6>
+                            <h6 class="flight-way">ONEWAY</h6>
+                            <h6 class="flight-time">Sat, 25 Dec 2021</h6>
+                        </div>
+
+                        <h2>KHL</h2>
+
+
+                    </div>
+
+
+                    <div class="book-flight">
+
+                        <p>Starting From</p>
+                        <h6>TK.3,000.0</h6>
+                        <a href="#" class="button-green-small">Book Now</a>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            </section>
+
+
+
+
+            
+
+        <section class="section">
+
+
+
+
+                
+            <div class="container">
+
+
+                
+                    <div class="text-center mb-5">
+
+                    <h2>Top Domestic Airline</h2>
+                    <img src="images/underlin.png" class="underline">
+                    
+                    </div>
+
+
+                    <div class="row g-lg-5 mb-5">
+
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/qatar.png">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/emirates.png">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/eithad.png">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/turkish.png">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/eithad.png">
+
+                            </div>
+
+                        </div>
+
+
+                        
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/turkish.png">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/qatar.png">
+
+                            </div>
+
+                        </div>
+
+
+                        
+                        <div class="col-lg-3 col-md-3">
+
+                            <div class="top-airlines">
+
+                            <img src="images/eithad.png">
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+<br>
+<br>
+<br>
+                 
+
+
+                
+                        <div class="text-center mb-5">
+    
+                        <h2>Top International Airline</h2>
+                        <img src="images/underlin.png" class="underline">
+                        
+                        </div>
+    
+    
+                        <div class="row g-lg-5">
+    
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/qatar.png">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/emirates.png">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/eithad.png">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/turkish.png">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/eithad.png">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/turkish.png">
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/qatar.png">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                            
+                            <div class="col-lg-3 col-md-3">
+    
+                                <div class="top-airlines">
+    
+                                <img src="images/eithad.png">
+    
+                                </div>
+    
+                            </div>
+    
+    
+                        </div>
+    
+
+
+            </div>
+
+
+
+
+
+
+        </section>
+
+
+
+  
+
+        <section>
+
+           
+            <div class="container guides">
+
+                <h3>Fly Emirates</h3>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                </p>
+
+                <div class="table-responsive">
+                    
+                    <table>
+
+                        <tr>
+                            <th>Emirates Ticket Price</th>
+                            <th>Days</th>
+                            <th>Prices Starts From</th>
+                        </tr>
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>S M T W T F S</td>
+                            <td>TK 6,178*</td>
+                        </tr>
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>S M T W T F S</td>
+                            <td>TK 6,178*</td>
+                        </tr>
+        
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>S M T W T F S</td>
+                            <td>TK 6,178*</td>
+                        </tr>
+        
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>S M T W T F S</td>
+                            <td>TK 6,178*</td>
+                        </tr>
+        
+        
+
+                    </table>
+             
+                </div>
+              
+                <h3>Fly Emirates Schedule</h3>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                </p>
+
+                <div class="table-responsive">
+                
+                    <table>
+
+                        <tr>
+                            <th>Route</th>
+                            <th>First Flight</th>
+                            <th>Last Flight</th>
+                            <th>Duration</th>
+                        </tr>
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>7:00</td>
+                            <td>19:00</td>
+                            <td>2 Hours</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>7:00</td>
+                            <td>19:00</td>
+                            <td>2 Hours</td>
+                        </tr>
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>7:00</td>
+                            <td>19:00</td>
+                            <td>2 Hours</td>
+                        </tr>
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>7:00</td>
+                            <td>19:00</td>
+                            <td>2 Hours</td>
+                        </tr>
+
+                        <tr>
+                            <td>Dhaka to Chittagong</td>
+                            <td>7:00</td>
+                            <td>19:00</td>
+                            <td>2 Hours</td>
+                        </tr>
+
+                    
+
+                    </table>
+                </div>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                </p>
+
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, 
+                    hic iure rem ducimus, sunt, asperiores earum tempora natus voluptatibus 
+                    nemo quo quidem blanditiis commodi sed doloremque neque cumque explicabo laboriosam?
+                </p>
+
+
+                <br>
+
+            </div>
+         
+        </section>
+
+
+
+
+        <section class="section section-grey">
+
+            <div class="container">
+
+                <div class="d-flex flex-column align-items-center">
+
+                <h2>Our Gallery</h2>
+                <img src="images/underlin.png" class="underline">
+
+                </div>
+
+                <div class="row mt-5 g-2">
+
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane4.png">
+
+                    </a>
+
+                  </div>
+
+                  
+                 
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane5.png">
+
+                    </a>
+                    
+                  </div>
+
+                  
+                 
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane6.png">
+
+                    </a>
+                    
+                  </div>
+
+
+                  
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane6.png">
+
+                    </a>
+                    
+                  </div>
+
+                  
+                  
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane5.png">
+
+                    </a>
+                    
+                  </div>
+
+                  
+                  
+                  <div class="col-6 col-lg-4 gallery">
+
+                    <a href="#">
+
+                    <img src="images/plane4.png">
+
+                    </a>
+                    
+                  </div>
+                  
+
+
+                </div>
+
+            </div>
+
+        </section>
+ 
+
+        <footer>
+
+            <div class="footer-top">   
+            
+                <div class="all-over"></div>
+   
+               <div class="container">
+   
+                   <div class="newsletter">
+   
+                       <span>Wanna Know Our Latest Offers And Deals Just Subscribe Here</span>
+                       <form>
+                           <div class="form-field">
+                               <input type="text" placeholder="ENTER YOUR EMAIL ID HERE">
+                               <input type="submit" value="SUBMIT">
+                           </div>
+   
+                       </form>
+   
+                   </div>
+   
+               </div>
+   
+           </div>
+   
+           <div class="footer-center">   
+   
+            <div class="container">
+   
+                   <div class="row">
+   
+                       <div class="col-12 col-lg-4 mb-5">
+   
+                           <a href="#"> <img src="images/Airhub Final logo.png" width="250px"></a>
+                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda asperiores veniam reiciendis, 
+                               sequi eos et enim mollitia dignissimos adipisci, provident atque quos voluptas numquam culpa quis. 
+                               Aspernatur, mollitia illum.</p>
+   
+                               <br>
+   
+                           <a href="#">Read More ></a>
+   
+                       </div>
+   
+   
+                       <div class="col-12 col-lg-4  mb-5">
+   
+                           <span>SITE MAP</span>
+   
+                           <div class="footer-menu">
+   
+                               <ul>
+   
+                                   <li><a href="#">Countries</a></li>
+                                   <li><a href="#">Regions</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Districts</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Airports</a></li>
+                                   <li><a href="#">Hotels</a></li>
+                                   <li><a href="#">Place Of interest</a></li>
+   
+                                   <li><a href="#">Countries</a></li>
+                                   <li><a href="#">Regions</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Districts</a></li>
+                                   <li><a href="#">Cities</a></li>
+                                   <li><a href="#">Airports</a></li>
+                                   <li><a href="#">Hotels</a></li>
+                                   <li><a href="#">Place Of interest</a></li>
+                               
+                               </ul>
+   
+                           </div>
+                           
+   
+                       </div>
+   
+   
+                       <div class="col-12 col-lg-4  mb-5">
+   
+                           <span>SUPPORTED PAYMENT METHOD</span>
+   
+                           <div class="footer-payment mb-3">
+   
+                               <img src="images/american-express.png">
+                               <img src="images/maestro.png">
+                               <img src="images/master_card.png">
+                               <img src="images/visa.png">
+                               <img src="images/paypal.png">
+                               <img src="images/visa-electron.png">
+                               <img src="images/discover.png">
+   
+   
+                           </div>
+
+                           <span>TAGS</span>
+
+                           <div class="tag-list-footer mt-3">
+
+                            <ul>
+
+                                <li>
+                                    <a href="#">Travel</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Booking</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Flights</a>
+                                </li>
+
+                            </ul>
+                            
+                           </div>
+   
+                       </div> 
+   
+               </div>
+   
+           </div>
+
+           </div>
+
+           <div class="footer-bottom">
+
+            <div class="container-fluid" style="background-color: #222222;padding: 20px 0;">
+
+                <div class="container">
+
+                    <div class="stay-connected">
+                    
+                    <div class="footer-social">
+                        <p>Stay Connected with Us -</p>
+                        <ul>
+
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        
+
+                        </ul>
+                    </div>
+
+                    <div>
+
+                        <p>Airhub.All Right Reserve</p>
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+           </div>
+   
+        </footer>
+
+
+  
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="vendor/slick/slick/slick-theme.css"/>
+        <script type="text/javascript" src="vendor/slick/slick/slick.min.js"></script>
+    
+        <script>
+                             
+
+function dropDown() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+
+$(document).ready(function(){
+
+$(".value-increment .value-button").click(function(){
+ var totalvalue =$(this).parent().find(".number").val();
+  if($(this).hasClass("increase")){
+     totalvalue++;
+       $(this).parent().find(".number").val(totalvalue);
+        }
+   if($(this).hasClass("decrease")){
+    if(totalvalue != 0){
+    totalvalue--;
+       $(this).parent().find(".number").val(totalvalue);
+       }
+         }
+                
+        });
+        })
+ 
+
+
+                  
+    
+        </script>
+              
+        
+    
+</body>
+</html>
